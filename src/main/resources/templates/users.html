@@ -5,20 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<p th:text="${allUsers}"></p>
 <table>
     <thead>
     <tr>
         <th>ID</th>
-        <th>Author</th>
-        <th>Books</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created At</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="users : ${allUsers}">
-        <td th:text="${users.}"></td>
-        <td th:text="${author.fullName}"></td>
-        <td th:text="${author.books}"></td>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getName()}"></td>
+        <td th:text="${user.getEmail()}"></td>
+        <td th:text="${user.getCreatedAt()}"></td>
     </tr>
     </tbody>
 </table>
